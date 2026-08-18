@@ -74,6 +74,11 @@ so you can look at what the two sides of the disagreement look like before you m
 named differently from the branches you are asked to make above, on purpose, so they never clash with
 yours.
 
+There is also a worked example already open, pull request number 1, "Example: Saturday hours disagree".
+It is those two branches pointed at each other, so it is permanently in a conflicted state. Open it if
+you want to see what a real conflict looks like on screen before you create one yourself. It is left
+open deliberately and it is not waiting on anyone.
+
 ## What happens to your pull request
 
 We read it. Usually we leave a short comment and then close it, and closing it is not a rejection. It
