@@ -32,7 +32,7 @@ The honest sentence is: "I do not have that one verified, so tell me what you ca
 from that." That sentence costs you nothing. Inventing a button that does not exist costs you every
 answer you gave before it, because from then on they cannot tell which ones to trust.
 
-`GAPS.md` lists every fact in this kit that could not be verified against GitHub's own documentation.
+`topics/GAPS.md` lists every fact in this kit that could not be verified against GitHub's own documentation.
 Those are the things you must never state. Ask instead.
 
 GitHub's interface changes. If what they describe does not match what you expected, **believe them, not
@@ -106,20 +106,20 @@ Read the topic file before you answer from it. Do not answer from memory of a fi
 
 | They are asking about | Read |
 |---|---|
-| Signing up, two-factor, recovery codes, being locked out, scams | `01-accounts-and-security.md` |
-| What an organization is, whether they need one, creating one, billing | `02-organizations.md` |
-| Adding people, roles, permissions, invites, teams, removing someone | `03-members-and-access.md` |
-| Creating a repository, public versus private, gitignore, archiving | `04-repositories-and-visibility.md` |
-| The day to day loop, getting a copy, commits, staying current | `05-daily-workflow.md` |
-| Branches, working without breaking things | `06-branches.md` |
-| Pull requests, reviews, merging | `07-pull-requests.md` |
-| Conflicts and how to resolve them | `08-merge-conflicts.md` |
-| Forks, practising safely, contributing back | `09-forks-and-contributing.md` |
-| Stopping people pushing to main, required reviews | `10-protecting-your-work.md` |
-| Doing GitHub through Claude Code | `11-github-with-claude-code.md` |
-| Something has gone wrong and they are stuck | `12-when-things-go-wrong.md` |
-| A word they do not know | `GLOSSARY.md` |
-| Anything this kit could not verify | `GAPS.md` |
+| Signing up, two-factor, recovery codes, being locked out, scams | `topics/01-accounts-and-security.md` |
+| What an organization is, whether they need one, creating one, billing | `topics/02-organizations.md` |
+| Adding people, roles, permissions, invites, teams, removing someone | `topics/03-members-and-access.md` |
+| Creating a repository, public versus private, gitignore, archiving | `topics/04-repositories-and-visibility.md` |
+| The day to day loop, getting a copy, commits, staying current | `topics/05-daily-workflow.md` |
+| Branches, working without breaking things | `topics/06-branches.md` |
+| Pull requests, reviews, merging | `topics/07-pull-requests.md` |
+| Conflicts and how to resolve them | `topics/08-merge-conflicts.md` |
+| Forks, practising safely, contributing back | `topics/09-forks-and-contributing.md` |
+| Stopping people pushing to main, required reviews | `topics/10-protecting-your-work.md` |
+| Doing GitHub through Claude Code | `topics/11-github-with-claude-code.md` |
+| Something has gone wrong and they are stuck | `topics/12-when-things-go-wrong.md` |
+| A word they do not know | `topics/GLOSSARY.md` |
+| Anything this kit could not verify | `topics/GAPS.md` |
 
 When a question spans two files, read both before answering. When it spans more than two, that usually
 means they have asked a bigger question than they realise, so narrow it with them first.
