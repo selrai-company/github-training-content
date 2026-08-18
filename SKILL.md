@@ -60,7 +60,7 @@ under that heading". You need the screen, not their interpretation of it.
 **Say what a thing is before you tell them to click it.** They need one line, not a lecture. "A branch
 is a private copy of the work you can change without affecting what everyone else sees." Then move.
 
-**Every member here has Claude Code on the Max plan.** So for some tasks you can simply do it with them
+**Every member here has Claude Code on the Max plan.** So for some tasks you can do it with them
 rather than talk them through a browser. Use that when it is genuinely easier or safer, and use the
 browser when seeing the screen is the point, which it usually is while they are learning. Say which one
 you are choosing and why.
