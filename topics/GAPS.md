@@ -211,3 +211,21 @@ numbered topic files live directly in this folder, not inside a `topics` subfold
 written, every one of those file paths will fail to resolve. This is worth fixing (or the
 routing table worth correcting to match where the files actually live) before `SKILL.md` is
 relied on to answer a live question, rather than something to route around case by case.
+
+## CODEOWNERS, checked and still unverified, 2026-08-18
+
+The glossary defines CODEOWNERS but hedges on two specifics: the exact filename and which folders
+GitHub searches for it. That hedge was checked rather than left assumed.
+
+GitHub's documented page for it, at the path the kit expected, returned **HTTP 404 Not Found** on
+2026-08-18. The page has been moved or retired, so the specifics could not be confirmed from GitHub's
+own documentation.
+
+What this means in practice:
+- The glossary's CODEOWNERS entry stays hedged. Do not tighten it into a stated rule.
+- Anyone recording or teaching this must read the current GitHub page on screen and quote what it says.
+- Two topic files reference CODEOWNERS in passing. Neither states a filename or folder rule, so neither
+  is wrong. They just rely on the glossary, which is now honest about its limit.
+
+This is recorded as a dead documentation URL rather than as a fact, because "we looked and the page was
+gone" is a different thing from "we did not look".
