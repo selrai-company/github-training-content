@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub training</title>
+<style>
+:root{--bg:#fbfbfa;--fg:#1a1a18;--mut:#5f5f5a;--line:#e3e3de;--card:#fff;--accent:#2f5d50;--mark:#fff0b8}
+@media (prefers-color-scheme:dark){:root{--bg:#16171a;--fg:#ececea;--mut:#a3a39d;--line:#2c2e33;--card:#1d1f23;--accent:#82b8a5;--mark:#4a4526}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+ font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:34px 20px 90px}
+h1{font-size:28px;margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:0 0 22px;max-width:64ch}
+.search{position:sticky;top:0;background:var(--bg);padding:12px 0 14px;z-index:5;
+ border-bottom:1px solid var(--line);margin-bottom:20px}
+input[type=search]{width:100%;padding:13px 15px;font-size:16px;border:1px solid var(--line);
+ border-radius:9px;background:var(--card);color:var(--fg)}
+input[type=search]:focus{outline:2px solid var(--accent);outline-offset:1px}
+.count{color:var(--mut);font-size:13px;margin-top:9px}
+.bar{height:5px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:7px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .18s}
+h2{font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--mut);
+ margin:30px 0 3px;font-weight:600}
+.gdesc{color:var(--mut);font-size:14px;margin:0 0 13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:16px 18px;
+ margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
+.card h3{margin:0 0 5px;font-size:17px;line-height:1.35}
+.card h3 a{color:var(--fg);text-decoration:none}
+.card h3 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.card p{margin:0;color:var(--mut);font-size:14.5px}
+.qs{margin:10px 0 0;padding:0;list-style:none}
+.qs li{font-size:13.5px;color:var(--mut);padding:2px 0 2px 15px;position:relative}
+.qs li:before{content:"";position:absolute;left:2px;top:11px;width:4px;height:4px;
+ border-radius:50%;background:var(--accent)}
+.tick{flex:0 0 auto;margin-top:3px}
+.tick input{width:19px;height:19px;accent-color:var(--accent);cursor:pointer}
+.done h3 a{color:var(--mut);text-decoration:line-through;text-decoration-thickness:1px}
+mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
+.empty{color:var(--mut);padding:26px 0}
+footer{margin-top:42px;padding-top:18px;border-top:1px solid var(--line);color:var(--mut);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>GitHub training</h1>
+<p class="sub">Every topic in one place. Search for the thing you are stuck on, or work down the list
+in order. Ticking a topic saves in this browser, so you can see how far you have got.</p>
+
+<div class="search">
+  <input type="search" id="q" autocomplete="off"
+    placeholder="What are you trying to do? Try: conflict, invite someone, undo, public">
+  <div class="count" id="count"></div>
+  <div class="bar"><i id="bar"></i></div>
+</div>
+
+<div id="list"></div>
+<footer id="foot"></footer>
+</div>
+
+<script>
+var DATA = {"items": [{"n": 1, "file": "topics/01-accounts-and-security.md", "title": "Your GitHub account, and locking it down", "blurb": "Your GitHub account is the one thing everything else in this kit sits on top of: your code, your organization, your team's access, all of it. A weak password, no recovery codes, or one phishing email clicked without thinking puts everything built on top of that account at risk too, not just the...", "qs": []}, {"n": 2, "file": "topics/02-organizations.md", "title": "Organizations, and when you actually need one", "blurb": "An organization moves your repositories off your own personal account and onto a shared account your business controls together. The practical payoff: when a second person needs ongoing access to your code, granting and revoking that access lives in one place, and it keeps working even on the...", "qs": []}, {"n": 3, "file": "topics/03-members-and-access.md", "title": "Adding people, and giving them the right access", "blurb": "Adding someone to your GitHub organization is how a bookkeeper, a virtual assistant, a business partner, or the nephew who built your website gets to do real work on your repositories, without you ever handing over your own password. You choose exactly what each person can see and change, on...", "qs": []}, {"n": 4, "file": "topics/04-repositories-and-visibility.md", "title": "Repositories, and the public or private choice", "blurb": "A repository is the container everything else in this kit lives inside of: your code, your files, your history. Get the visibility choice right when you create one (public or private) and you'll rarely think about it again. Get it wrong, especially by committing a password or an API key into...", "qs": []}, {"n": 5, "file": "topics/05-daily-workflow.md", "title": "The everyday workflow, and getting work in and out", "blurb": "This page covers the loop you'll actually run week to week: getting a copy of a repository onto your machine, making a change, committing it with a message that explains what you did, and keeping your copy current as other people change things too. It also covers something that trips up almost...", "qs": []}, {"n": 6, "file": "topics/06-branches.md", "title": "Branches, and changing things without breaking them", "blurb": "A branch is how you change things on GitHub without any risk of breaking what everyone else is already relying on. This file covers what a branch actually is, why you'd use one instead of editing the main copy directly, what the default branch is, both of GitHub's documented ways to create a...", "qs": []}, {"n": 7, "file": "topics/07-pull-requests.md", "title": "Pull requests, and getting a change reviewed", "blurb": "A pull request is how a change on your branch gets looked at, discussed, and folded back into your main copy on purpose. This file covers what a pull request actually is, opening one, writing a title and description someone can actually review, draft pull requests, reviewing someone else's pull...", "qs": []}, {"n": 8, "file": "topics/08-merge-conflicts.md", "title": "Merge conflicts, and what to do when git asks you a question", "blurb": "A merge conflict is the moment git can't decide something on its own and stops to ask you. This file covers what a conflict actually is, what the marker lines you'll see mean, the exact click path for fixing a simple one in your browser (including the step people miss and get stuck without),...", "qs": []}, {"n": 9, "file": "topics/09-forks-and-contributing.md", "title": "Forks, and practising without breaking anything", "blurb": "A fork is your own personal copy of somebody else's repository, sitting under your own account, with your name on it as the owner. This file covers what a fork actually is and how it differs from a branch, why you'd fork a repository instead of asking to edit it directly, what access forking...", "qs": []}, {"n": 10, "file": "topics/10-protecting-your-work.md", "title": "Protecting the main copy, and what it costs", "blurb": "This file covers why you would stop people pushing straight to your default branch, the two ways GitHub lets you enforce that (rulesets and the older branch protection rules, and which one this kit reaches for today), requiring a review before a change can merge, what that actually costs a small...", "qs": []}, {"n": 11, "file": "topics/11-github-with-claude-code.md", "title": "Using GitHub through Claude Code", "blurb": "Every member of this kit has Claude Code on the Max plan. That changes how you can do GitHub: alongside every browser click path this kit teaches, you can describe what you want in plain English and let Claude Code do the underlying work for you. This page is the one place that pulls all of that...", "qs": []}, {"n": 12, "file": "topics/12-when-things-go-wrong.md", "title": "When it goes wrong, and how to get unstuck", "blurb": "Bookmark this page. Every other file in this kit teaches you how to do something. This one is for the moment it hasn't gone the way that file described, and you don't know what to click next.", "qs": []}, {"n": 13, "file": "topics/13-issues-and-tracking-work.md", "title": "Issues, and keeping track of what needs doing", "blurb": "An issue is a numbered note about something that needs doing, or something that is broken, that anyone with access to your repository can see, comment on, and mark done. It lives next to the work itself rather than in a separate app, so nothing gets tracked in one place and built in another.", "qs": []}, {"n": 14, "file": "topics/14-markdown-and-writing.md", "title": "Markdown, and writing things people can actually read", "blurb": "Right now, if you write a plain paragraph in a GitHub comment or a README, it reads as one dense block of text, no matter how important some of it is. Markdown fixes that. A few characters typed around your words turn into headings, bold text, checklists, and tables the moment GitHub displays...", "qs": []}, {"n": 15, "file": "topics/15-finding-things.md", "title": "Finding things again, without hunting", "blurb": "Right now, finding something you know exists somewhere in your work probably means clicking into a repository, scrolling, giving up, and asking whoever set it up. That costs you minutes every time, and it costs your team more, because every one of those questions interrupts someone else's...", "qs": []}, {"n": 16, "file": "topics/16-notifications.md", "title": "Notifications, and not drowning in them", "blurb": "Right now, if notifications feel like noise, you are probably choosing between two bad options: read everything, which eats an hour a week you do not have, or ignore the pile, which means the one message that actually needed a decision from you, someone asking you to check their work, or someone...", "qs": []}, {"n": 17, "file": "topics/17-releases-and-versions.md", "title": "Releases and versions, marking what you shipped", "blurb": "A release is how you point at your repository and say \"this exact state, right here, is what went out.\" Not the current state, which keeps changing as people keep working. One specific moment, permanently labelled, that you can come back to on any later date.", "qs": []}, {"n": 18, "file": "topics/18-automation-basics.md", "title": "Automation, what GitHub can do while you sleep", "blurb": "GitHub can carry out instructions for you automatically, the moment something specific happens in your repository. Not \"you remember to run a check every Friday.\" Something happens, GitHub notices, and it does the thing, whether anyone is at a computer or not. GitHub's own name for this feature...", "qs": []}, {"n": 19, "file": "topics/19-security-features.md", "title": "The security features that watch your back", "blurb": "Two of the most common ways a small business gets broken into online are a password or an API key that ended up somewhere public by accident, and a piece of software the business relies on that turns out to have a known hole in it. GitHub has features that watch for both of these, some of them...", "qs": []}], "extras": [{"file": "topics/GLOSSARY.md", "title": "Glossary", "blurb": "Every word this kit uses, in plain English, with the ones people mix up kept clearly apart.", "qs": []}, {"file": "STRATEGY-PACK.md", "title": "Strategy pack", "blurb": "What to do first, whether you need an organisation yet, and how much process is the right amount.", "qs": []}, {"file": "FAQ-PACK.md", "title": "FAQ pack", "blurb": "Straight answers, including the questions people would rather not ask out loud.", "qs": []}, {"file": "topics/GAPS.md", "title": "What we could not verify", "blurb": "Every fact GitHub does not publish clearly, so you check your own screen instead of trusting a guess.", "qs": []}]};
+var GROUPS = [["Start here", "The setup. Do these in order if you are new.", 1, 4], ["Doing the work", "The everyday loop, and changing things without breaking them.", 5, 9], ["Keeping it safe and tidy", "Protecting work, tracking it, and finding it again.", 10, 16], ["Growing up", "The things you reach for as the business gets bigger.", 17, 21], ["Staying in control", "Undoing, backing up, and the rest of the platform.", 22, 24]];
+var KEY = 'ghkit-done';
+var done = new Set(JSON.parse(localStorage.getItem(KEY) || '[]'));
+
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+function hl(s, q){
+  s = String(s || '');
+  if (!q) return esc(s);
+  var i = s.toLowerCase().indexOf(q);
+  if (i < 0) return esc(s);
+  return esc(s.slice(0,i)) + '<mark>' + esc(s.slice(i,i+q.length)) + '</mark>' + esc(s.slice(i+q.length));
+}
+
+function matches(it, q){
+  if (!q) return true;
+  var hay = (it.title + ' ' + (it.blurb||'') + ' ' + (it.qs||[]).join(' ')).toLowerCase();
+  return hay.indexOf(q) >= 0;
+}
+
+function card(it, q){
+  var id = 't' + (it.n || it.title);
+  var isDone = done.has(id);
+  var qs = (it.qs || []).filter(function(x){ return !q || x.toLowerCase().indexOf(q) >= 0; }).slice(0,4);
+  var list = qs.length ? '<ul class="qs">' + qs.map(function(x){ return '<li>' + hl(x,q) + '</li>'; }).join('') + '</ul>' : '';
+  return '<div class="card' + (isDone ? ' done' : '') + '">' +
+    '<label class="tick"><input type="checkbox" data-id="' + id + '"' + (isDone ? ' checked' : '') +
+      ' aria-label="Mark as read"></label>' +
+    '<div style="flex:1"><h3><a href="' + it.file + '">' + hl(it.title,q) + '</a></h3>' +
+    '<p>' + hl(it.blurb,q) + '</p>' + list + '</div></div>';
+}
+
+function render(){
+  var q = document.getElementById('q').value.trim().toLowerCase();
+  var out = '', shown = 0, i, g, inGroup;
+  for (i = 0; i < GROUPS.length; i++){
+    g = GROUPS[i];
+    inGroup = DATA.items.filter(function(it){ return it.n >= g[2] && it.n <= g[3] && matches(it,q); });
+    if (!inGroup.length) continue;
+    shown += inGroup.length;
+    out += '<h2>' + esc(g[0]) + '</h2><p class="gdesc">' + esc(g[1]) + '</p>' +
+           inGroup.map(function(it){ return card(it,q); }).join('');
+  }
+  var ex = DATA.extras.filter(function(it){ return matches(it,q); });
+  if (ex.length){
+    shown += ex.length;
+    out += '<h2>Reference</h2><p class="gdesc">Not lessons. Look things up here.</p>' +
+           ex.map(function(it){ return card(it,q); }).join('');
+  }
+  document.getElementById('list').innerHTML = out ||
+    '<p class="empty">Nothing matches that. Try a plainer word, such as invite, conflict, private or undo.</p>';
+  document.getElementById('count').textContent = q ? (shown + ' matching') :
+    (DATA.items.length + ' topics, ' + DATA.extras.length + ' reference pages');
+  var total = DATA.items.length + DATA.extras.length;
+  var pct = total ? Math.round(100 * done.size / total) : 0;
+  document.getElementById('bar').style.width = pct + '%';
+  document.getElementById('foot').textContent = done.size
+    ? ('You have ticked ' + pct + ' per cent of this kit. Progress is saved in this browser only.')
+    : 'Tick a topic once you have read it. Progress is saved in this browser only.';
+}
+
+document.addEventListener('input', function(e){ if (e.target.id === 'q') render(); });
+document.addEventListener('change', function(e){
+  if (e.target.type === 'checkbox' && e.target.dataset.id){
+    if (e.target.checked) { done.add(e.target.dataset.id); } else { done.delete(e.target.dataset.id); }
+    localStorage.setItem(KEY, JSON.stringify(Array.from(done)));
+    render();
+  }
+});
+render();
+</script>
+</body>
+</html>

@@ -84,6 +84,18 @@ If it does not know something, it will say so rather than guess. That is deliber
 instruction is worse than no instruction, because you cannot tell which of the earlier answers to trust
 afterwards.
 
+## The dashboard
+
+If you would rather see everything at once than scroll a page, open **`dashboard.html`**. Download it
+and double click it, and it opens in your browser like any other page.
+
+It lists every topic with what it is for, lets you search by the thing you are stuck on rather than by
+the name of a feature, and lets you tick topics off as you read them so you can see how far you have
+got. The ticks are saved in your own browser and are not sent anywhere.
+
+Searching it works on plain words. Typing "conflict", "invite someone", "undo" or "public" will find
+the right topic without you knowing what GitHub calls it.
+
 ## The topics
 
 Read these in order if you are starting from nothing. Jump straight to one if you have a specific
