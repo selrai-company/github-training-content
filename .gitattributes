@@ -1,0 +1,6 @@
+# Keep every text file in this repo using LF line endings, on every machine.
+# Without this, a change made on Windows can arrive with different line endings
+# to the same file changed on a Mac, and git then treats the whole file as
+# conflicting instead of the one line that actually differs. That would turn the
+# merge conflict lesson into a mess the browser cannot resolve.
+* text=auto eol=lf
