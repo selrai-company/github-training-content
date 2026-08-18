@@ -98,7 +98,7 @@ below.
 - **Whether a private repository owned by a personal account (not an organisation) has its own
   "allow forking" toggle.** GitHub's documentation spells this out for organisation-owned
   private repositories in detail, but not for a personal account's private repository. Have
-  the repository's owner check their own Settings → Features section directly.
+  the repository's owner check their own Settings then Features section directly.
 - **Whether forking uses up a seat or costs anything on a paid plan.** Not stated either way in
   what this kit found. Confirm on your own account's billing or usage page.
 - **Whether deleting a fork automatically closes any pull requests opened from it.** Not

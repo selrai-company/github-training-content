@@ -51,20 +51,6 @@ of adding to it. This kit does not teach it as a routine fix, and it's one of th
 Claude Code treats as needing you directly and deliberately involved, covered in
 `11-github-with-claude-code.md`.
 
-**Rewriting history.** Editing or removing an entry from a repository's commit history itself,
-rather than adding a new commit that cancels it out. This kit doesn't teach how to do this. Where it
-would be the answer, this page says so and tells you to bring it to someone else, a mistake made
-while rewriting history can do more damage than the thing you were trying to fix.
-
-**Default branch.** The branch a repository shows first, and the one most connected features (like
-automatically closing a linked issue) are built around. Usually called `main`.
-
-**Restore branch.** A button GitHub shows on a closed or merged pull request, that brings back the
-branch that pull request was made from if it's since been deleted.
-
-**Fork.** A full copy of someone else's repository, made under your own account, that stays linked
-back to the original.
-
 **Secret.** Any value that grants access on its own if someone else gets hold of it, a password, an
 API key, a token. The danger with a secret isn't that it exists in a file, it's that once it's been
 seen, only changing the value itself, not deleting the file, actually closes the risk.
@@ -73,13 +59,27 @@ seen, only changing the value itself, not deleting the file, actually closes the
 old one there at the same time. This is the actual fix for a leaked secret, not deleting the file
 that contained it.
 
-**Danger Zone.** The section at the bottom of a repository's **Settings** page where the genuinely
-serious, hard-to-reverse actions live: changing visibility, transferring ownership, and deleting
-the repository outright. It's laid out separately from everything else on purpose.
+**Rewriting history.** Editing or removing an entry from a repository's commit history itself,
+rather than adding a new commit that cancels it out. This kit doesn't teach how to do this. Where it
+would be the answer, this page says so and tells you to bring it to someone else, a mistake made
+while rewriting history can do more damage than the thing you were trying to fix.
+
+**Restore branch.** A button GitHub shows on a closed or merged pull request, that brings back the
+branch that pull request was made from if it's since been deleted.
+
+**Default branch.** The branch a repository shows first, and the one most connected features (like
+automatically closing a linked issue) are built around. Usually called `main`.
 
 **ZIP snapshot.** A one-time downloaded copy of a repository's files, with no connection back to
 GitHub and no history attached. It never updates itself, unlike a clone, which stays linked to the
 repository it came from.
+
+**Danger Zone.** The section at the bottom of a repository's **Settings** page where the genuinely
+serious, hard-to-reverse actions live: changing visibility, transferring ownership, and deleting
+the repository outright. It's laid out separately from everything else on purpose.
+
+**Fork.** A full copy of someone else's repository, made under your own account, that stays linked
+back to the original.
 
 ## How to do it
 

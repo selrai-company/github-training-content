@@ -323,7 +323,38 @@ something GitHub's interface can do for you.
 doesn't teach that, a mistake made while rewriting history can do more damage than the original
 problem. Bring it to the community rather than attempting it alone from a description on this page.
 
-## Questions people ask here
+## FAQ
+
+**Have I actually lost my work?** Almost never. If you had not committed the change yet, it
+lives on in your last commit, and any of the steps above under "Undoing a change you haven't
+saved yet" gets you back to it. If you had committed it, even merged it, it is still sitting in
+the commit history, GitHub never removes an entry from that list on its own. The only genuine
+loss is an uncommitted edit you deliberately asked Claude Code to discard, or work on a branch
+that never went through a pull request and was then deleted. Both of those are real, and both
+are covered in "What can genuinely never be undone" below.
+
+**Can anyone tell I made a mistake?** Yes, and that's the point, not something to feel bad
+about. Every commit stays in the history with your name on it, whether you fix the mistake with
+a revert or leave it exactly as it happened. A revert is itself just a new, ordinary commit,
+visible to anyone with access to the repository, sitting right next to the change it cancels
+out. Treat that visibility as the safety net it actually is: it's what lets you, or anyone else
+on your team, work out what happened and undo it cleanly, months later if needed.
+
+**Is it really, permanently gone?** Depends what "it" is. A deleted repository is recoverable
+for up to 90 days, with some limits worth reading properly (covered above). A merged change is
+recoverable with a revert at any time, the mistaken commit is never removed from the history.
+A deleted branch is only recoverable if it went through a pull request first. An uncommitted
+change you asked Claude Code to discard, and a repository past its 90-day window, are not coming
+back. Check which situation you're actually in before assuming either way.
+
+**What can genuinely never be undone?** A short, honest list: a repository once its 90-day
+restore window has passed, or one that was part of a fork network that can't be detached; a
+branch deleted with no pull request ever opened against it; history that's been deliberately
+rewritten; a force-push that overwrote commits nobody else had a copy of; an uncommitted change
+you asked to have discarded; and a secret, a password or an API key, that was ever committed and
+pushed, even once. Rotating that secret afterward stops it being useful to whoever finds it, but
+it doesn't erase the fact that it was exposed. Everything else on this page has a documented way
+back.
 
 **Is there a general "Undo" button on GitHub, like Ctrl+Z?** No, and it wouldn't make sense the
 way GitHub is built. Every change is its own separate, named commit, so "undo" always means

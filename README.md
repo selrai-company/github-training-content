@@ -218,7 +218,6 @@ because GitHub changes its interface and does not document every corner of it. A
 instruction is worse than no instruction, because after you follow one you cannot tell which of the
 earlier ones to trust.
 
-**This kit is being written in the open and it is not finished.** The tables above are the accurate list
-of what exists right now, and the section marked "still being written" is the honest list of what does
-not. Where something is not covered yet, it is missing rather than covered badly. That is a deliberate
-choice, and this note goes away when the last topic lands.
+**All twenty-four topics are written.** The tables above are the complete list. Where GitHub does
+not publish something clearly, the relevant page says so and tells you to read your own screen,
+and every one of those is collected in [what we could not verify](topics/GAPS.md).
