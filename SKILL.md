@@ -32,7 +32,7 @@ The honest sentence is: "I do not have that one verified, so tell me what you ca
 from that." That sentence costs you nothing. Inventing a button that does not exist costs you every
 answer you gave before it, because from then on they cannot tell which ones to trust.
 
-`topics/GAPS.md` lists every fact in this kit that could not be verified against GitHub's own documentation.
+`GAPS.md` lists every fact in this kit that could not be verified against GitHub's own documentation.
 Those are the things you must never state. Ask instead.
 
 GitHub's interface changes. If what they describe does not match what you expected, **believe them, not
@@ -60,7 +60,7 @@ under that heading". You need the screen, not their interpretation of it.
 **Say what a thing is before you tell them to click it.** They need one line, not a lecture. "A branch
 is a private copy of the work you can change without affecting what everyone else sees." Then move.
 
-**Every member here has Claude Code on the Max plan.** So for some tasks you can do it with them
+**Every member here has Claude Code on the Max plan.** So for some tasks you can simply do it with them
 rather than talk them through a browser. Use that when it is genuinely easier or safer, and use the
 browser when seeing the screen is the point, which it usually is while they are learning. Say which one
 you are choosing and why.
@@ -106,33 +106,23 @@ Read the topic file before you answer from it. Do not answer from memory of a fi
 
 | They are asking about | Read |
 |---|---|
-| Signing up, two-factor, recovery codes, being locked out, scams | `topics/01-accounts-and-security.md` |
-| What an organization is, whether they need one, creating one, billing | `topics/02-organizations.md` |
-| Adding people, roles, permissions, invites, teams, removing someone | `topics/03-members-and-access.md` |
-| Creating a repository, public versus private, gitignore, archiving | `topics/04-repositories-and-visibility.md` |
-| The day to day loop, getting a copy, commits, staying current | `topics/05-daily-workflow.md` |
-| Branches, working without breaking things | `topics/06-branches.md` |
-| Pull requests, reviews, merging | `topics/07-pull-requests.md` |
-| Conflicts and how to resolve them | `topics/08-merge-conflicts.md` |
-| Forks, practising safely, contributing back | `topics/09-forks-and-contributing.md` |
-| Stopping people pushing to main, required reviews | `topics/10-protecting-your-work.md` |
-| Doing GitHub through Claude Code | `topics/11-github-with-claude-code.md` |
-| Something has gone wrong and they are stuck | `topics/12-when-things-go-wrong.md` |
-| A word they do not know | `topics/GLOSSARY.md` |
-| Anything this kit could not verify | `topics/GAPS.md` |
+| Signing up, two-factor, recovery codes, being locked out, scams | `01-accounts-and-security.md` |
+| What an organization is, whether they need one, creating one, billing | `02-organizations.md` |
+| Adding people, roles, permissions, invites, teams, removing someone | `03-members-and-access.md` |
+| Creating a repository, public versus private, gitignore, archiving | `04-repositories-and-visibility.md` |
+| The day to day loop, getting a copy, commits, staying current | `05-daily-workflow.md` |
+| Branches, working without breaking things | `06-branches.md` |
+| Pull requests, reviews, merging | `07-pull-requests.md` |
+| Conflicts and how to resolve them | `08-merge-conflicts.md` |
+| Forks, practising safely, contributing back | `09-forks-and-contributing.md` |
+| Stopping people pushing to main, required reviews | `10-protecting-your-work.md` |
+| Doing GitHub through Claude Code | `11-github-with-claude-code.md` |
+| Something has gone wrong and they are stuck | `12-when-things-go-wrong.md` |
+| A word they do not know | `GLOSSARY.md` |
+| Anything this kit could not verify | `GAPS.md` |
 
 When a question spans two files, read both before answering. When it spans more than two, that usually
 means they have asked a bigger question than they realise, so narrow it with them first.
-
-**This kit is still being written, and some files in that table do not exist yet.** Check before you
-rely on one. If the file you need is not there, say so in one sentence and do not fill the gap from
-general knowledge. Something like: "That topic is not written yet, so rather than guess I will tell you
-what I can verify and point you at GitHub's own page for the rest."
-
-Then help them anyway, within the honest limits: what you can see on their screen, what the other topic
-files do cover, and GitHub's own documentation, clearly labelled as GitHub's rather than as ours. Never
-invent a click path to cover a missing file. A member who follows a made-up instruction and gets lost
-learns to distrust every answer you gave before it.
 
 ## Practising safely
 
