@@ -1,0 +1,20 @@
+# A .gitignore is a list of files git must leave alone.
+# Anything matching a line below stays on your computer and never gets uploaded.
+# Copy this file into your own projects. Read every line, there are only a few.
+
+# Keys and passwords. This is the important part.
+.env
+.env.*
+# The exception: a .env.example holds fake placeholder values, so it is safe to upload.
+!.env.example
+
+# Downloaded code libraries. Big, and rebuilt from scratch anyway.
+node_modules/
+.venv/
+
+# Files your computer creates by itself, that nobody else needs.
+.DS_Store
+Thumbs.db
+
+# Anything you want kept private. Put files in a folder with this name.
+private/
