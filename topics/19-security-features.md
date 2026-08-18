@@ -186,7 +186,7 @@ exists, it opens a pull request containing that fix, ready for someone to review
 **Treat that pull request exactly like any other pull request, not as something to merge on sight.**
 `07-pull-requests.md` covers reviewing one properly. A dependency update can occasionally change how
 something behaves, not just patch a security hole, so the same "does this still work" check you would
-give any other change still applies, it is simply Dependabot that wrote the change instead of a
+give any other change still applies, it is Dependabot that wrote the change instead of a
 person.
 
 ### Repository security advisories, briefly
@@ -235,7 +235,7 @@ over.
 **Turn on Dependabot alerts even if you are working alone.** It costs nothing, GitHub lists it as a
 GitHub Free feature, and it answers a question you cannot easily answer yourself: whether any piece
 of software your project depends on has since been found to have a known problem. There is close to
-no cost to having it on and simply not acting on every alert the moment it appears.
+no cost to having it on and not acting on every alert the moment it appears.
 
 **Do not assume secret scanning is protecting you if you are solo on a private, personal-account
 repository.** As covered above, this kit could not find a paid tier that turns it on for that
@@ -313,8 +313,8 @@ constantly, so this can change later without you doing anything differently.
 
 **Does turning these features on slow anything down?** No. None of the features in this file change
 how your repository behaves day to day. Secret scanning and push protection act at the moment
-something is pushed, not while you are working. Dependabot alerts run in the background and simply
-add to a list you check when you choose to.
+something is pushed, not while you are working. Dependabot alerts run in the background and add to
+a list you check when you choose to.
 
 **Do I have to fix every alert the moment it appears?** No. An alert is information, not a deadline.
 Fixing the ones with an available patch is usually close to effortless, so there is rarely a reason
