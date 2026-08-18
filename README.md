@@ -89,6 +89,8 @@ afterwards.
 Read these in order if you are starting from nothing. Jump straight to one if you have a specific
 problem.
 
+### Getting set up
+
 | Topic | Read this when |
 | --- | --- |
 | [Your account, and locking it down](topics/01-accounts-and-security.md) | You are setting up, or you are worried about getting locked out |
@@ -96,9 +98,37 @@ problem.
 | [Adding people, and the right access](topics/03-members-and-access.md) | Someone else needs in, or someone is leaving |
 | [Repositories, public or private](topics/04-repositories-and-visibility.md) | You are making a place to keep work, and choosing who can see it |
 
-More topics are on the way: the everyday workflow, branches, pull requests, merge conflicts, forks,
-protecting the main copy, using GitHub through Claude Code, and a troubleshooting guide. This page lists
-them as they land.
+### Doing the work
+
+| Topic | Read this when |
+| --- | --- |
+| [The everyday workflow](topics/05-daily-workflow.md) | You want the normal loop: get a copy, change it, save it |
+| [Branches](topics/06-branches.md) | You want to change something without breaking what everyone else sees |
+| [Pull requests](topics/07-pull-requests.md) | You want a change looked at before it lands |
+| [Merge conflicts](topics/08-merge-conflicts.md) | Two changes disagree and you are being asked to decide |
+| [Markdown, and writing things people can read](topics/14-markdown-and-writing.md) | You are writing a README, an issue, or a description |
+
+### Still being written
+
+Forks and practising safely. Protecting the main copy. Using GitHub through Claude Code.
+Troubleshooting. Issues and tracking work. Finding things again. Notifications. Releases and versions.
+Automation. The security features. Licences and who owns what. Moving existing work in. Undoing things.
+Backups and never being locked in. The rest of the platform.
+
+They appear in the tables above as they land, so the tables are always the accurate list of what
+exists.
+
+## Beyond the step by step
+
+Two documents that cut across all the topics:
+
+- **[The strategy pack](STRATEGY-PACK.md)** is the judgement layer rather than the mechanics: what to do
+  first, whether you even need an organization yet, what changes at three people and at five, how much
+  process is the right amount, and what good looks like months later. It carries three worked scenarios,
+  including a sole operator and a six week contractor.
+- **[The FAQ pack](FAQ-PACK.md)** answers the questions directly, including the ones people would rather
+  not ask out loud: what actually is git and how is it different from GitHub, can anyone see my work,
+  will this cost me money without warning, do I need to know how to code.
 
 ## The written guides
 
@@ -128,13 +158,19 @@ to already know what a fork or a branch is.
 You cannot damage anything by doing this. You work in your own copy, and you have not been given the
 access needed to change this original, so the system refuses rather than letting you make a mistake.
 
-## An honest note on what is here
+## How this was built, and how far to trust it
 
-This kit is being built in the open and it is not finished. Four topics are written. The rest are listed
-above and are on their way. Where something is not covered yet, it is not covered, rather than covered
-badly.
+**Everything here comes from GitHub's own documentation.** Every topic page ends with the exact pages it
+was built from, so you can check any claim yourself rather than taking our word for it. There are
+currently ninety-three such sources across the pages.
 
-Every fact in these pages comes from GitHub's own documentation, and each page lists the sources it was
-built from at the bottom. Where GitHub does not publish something clearly, the page tells you to read
-your own screen rather than guessing on your behalf. GitHub's interface changes, and a confident wrong
-instruction is worse than no instruction.
+**Where GitHub does not publish something clearly, we do not guess on your behalf.** The page tells you
+to look at your own screen and read what is actually there. That happens more than you might expect,
+because GitHub changes its interface and does not document every corner of it. A confident wrong
+instruction is worse than no instruction, because after you follow one you cannot tell which of the
+earlier ones to trust.
+
+**This kit is being written in the open and it is not finished.** The tables above are the accurate list
+of what exists right now, and the section marked "still being written" is the honest list of what does
+not. Where something is not covered yet, it is missing rather than covered badly. That is a deliberate
+choice, and this note goes away when the last topic lands.
