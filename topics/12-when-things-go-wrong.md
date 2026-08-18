@@ -1,21 +1,89 @@
 # When it goes wrong, and how to get unstuck
 
-Bookmark this page. Every other file in this kit teaches you how to do something. This one is for
-the moment it hasn't gone the way that file described, and you don't know what to click next.
+Every other file in this kit teaches you how to do something. This one is for the moment it
+hasn't gone the way that file described, and you don't know what to click next.
+
+## What this gets you
 
 Ten real situations are covered below, each in the same shape: what actually happened, what to do
-about it right now, and the point at which you should stop digging and ask someone rather than keep
-guessing. None of these mean you broke something. GitHub is built so that almost nothing you can do
-by clicking around is instantly, silently permanent, the two genuinely hard-to-undo actions
-(deleting a repository outright, and rewriting history to remove something) are both flagged
-clearly below, and this kit steers you away from doing either one alone.
+about it right now, and the point at which you should stop digging and ask someone rather than
+keep guessing. None of these mean you broke something. GitHub is built so that almost nothing you
+can do by clicking around is instantly, silently permanent. The two genuinely hard-to-undo actions,
+deleting a repository outright and rewriting history to remove something, are both flagged clearly
+below, and this kit steers you away from doing either one alone.
 
-Every member of this kit has Claude Code on the Max plan. Where it's genuinely the safer or easier
-path, this page says so and shows you what to type. Where the problem is tied to you as a real
-person (signing in, two-factor authentication, account recovery), it stays in your browser, and
-this page says that plainly too, the same rule this whole kit follows.
+The business value is time and nerve. Without this page, a stuck moment turns into an afternoon of
+guessing, or worse, a guess that makes the original mistake bigger. With it, you find your
+situation below, take the one safe step, and get back to work. Bookmark this page.
 
-## I cannot sign in
+## Before you start
+
+- You do not need to have read every other file in this kit to use this one. Each situation below
+  names the file that covers it in full, where one exists.
+- You need to be signed in to GitHub in your browser for most of what's below. A handful of items
+  are about not being able to sign in at all, those are covered first.
+- Every member of this kit has Claude Code on the Max plan. Where it's genuinely the safer or
+  easier path, this page says so and shows you what to type. Where the problem is tied to you as a
+  real person, signing in, two-factor authentication, account recovery, it stays in your browser,
+  and this page says that plainly too. That's the same rule this whole kit follows.
+- Work out which of the ten situations below you're actually in before you try anything. "I can't
+  sign in" and "I lost my phone with two-factor authentication on it" read like the same problem
+  and are not, and the fix for one won't touch the other.
+
+## The words you need
+
+**Two-factor authentication (2FA).** A second proof of identity, on top of your password, usually a
+code from an app or a physical key, that GitHub asks for when you sign in. It matters because it's
+also the thing that can lock you out hardest if you lose access to it, there is no simple support
+override for it, covered below.
+
+**Recovery codes.** A one-time-use list of backup codes you're given when you turn on two-factor
+authentication, meant to be saved somewhere that is not the phone your 2FA normally runs on. They
+are the fastest way back in if you lose your usual 2FA method, and the only fully self-service one.
+
+**Revert.** Adding a brand new commit that does the exact opposite of an earlier one, so a file or a
+whole set of changes ends up back the way it was. The mistaken commit stays in the project's
+history, sitting right next to the one that cancels it out. Nothing about the past is erased. Think
+of it as crossing something out rather than tearing the page.
+
+**Force-push.** Pushing a rewritten history up to GitHub, overwriting what was there before instead
+of adding to it. This kit does not teach it as a routine fix, and it's one of the specific actions
+Claude Code treats as needing you directly and deliberately involved, covered in
+`11-github-with-claude-code.md`.
+
+**Rewriting history.** Editing or removing an entry from a repository's commit history itself,
+rather than adding a new commit that cancels it out. This kit doesn't teach how to do this. Where it
+would be the answer, this page says so and tells you to bring it to someone else, a mistake made
+while rewriting history can do more damage than the thing you were trying to fix.
+
+**Default branch.** The branch a repository shows first, and the one most connected features (like
+automatically closing a linked issue) are built around. Usually called `main`.
+
+**Restore branch.** A button GitHub shows on a closed or merged pull request, that brings back the
+branch that pull request was made from if it's since been deleted.
+
+**Fork.** A full copy of someone else's repository, made under your own account, that stays linked
+back to the original.
+
+**Secret.** Any value that grants access on its own if someone else gets hold of it, a password, an
+API key, a token. The danger with a secret isn't that it exists in a file, it's that once it's been
+seen, only changing the value itself, not deleting the file, actually closes the risk.
+
+**Rotate.** Getting a new value for a secret from whatever service issued it, and invalidating the
+old one there at the same time. This is the actual fix for a leaked secret, not deleting the file
+that contained it.
+
+**Danger Zone.** The section at the bottom of a repository's **Settings** page where the genuinely
+serious, hard-to-reverse actions live: changing visibility, transferring ownership, and deleting
+the repository outright. It's laid out separately from everything else on purpose.
+
+**ZIP snapshot.** A one-time downloaded copy of a repository's files, with no connection back to
+GitHub and no history attached. It never updates itself, unlike a clone, which stays linked to the
+repository it came from.
+
+## How to do it
+
+### I cannot sign in
 
 "I can't sign in" is actually several different problems wearing the same sentence. Work out which
 one you're in before you try anything, because the fix is different for each.
@@ -32,8 +100,8 @@ email," after that you'd need to request a fresh one.
 **You can't remember your username, or which email you signed up with.** If you still have a
 working local copy of a repository on your machine, or GitHub Desktop installed, GitHub's own
 documentation gives a few ways to recover it from there: in GitHub Desktop, your username is under
-**Preferences → Accounts** (Mac) or **Options → Accounts** (Windows) in the app's own menu, and your
-email is in the matching **Git** section. If you're working from a clone through Claude Code
+**Preferences then Accounts** (Mac) or **Options then Accounts** (Windows) in the app's own menu, and
+your email is in the matching **Git** section. If you're working from a clone through Claude Code
 instead, ask it directly: "What GitHub username or email is this repository set up under?" and it
 can check your git configuration for you. If you have neither a local copy nor GitHub Desktop and
 genuinely can't recall any detail of the account at all, that's a case for GitHub's own support form,
@@ -45,11 +113,13 @@ own, it's the next section, go there.
 **You see a message about a payment, or the word "locked," rather than a plain sign-in failure.**
 That's a narrower, different thing: it means your account's *paid* features are locked, not that
 you can't sign in at all. GitHub's own wording: "Your account's paid features are locked if your
-payment is past due because of billing problems." The fix is to update your payment method from
-your billing settings (profile picture → **Settings** → **Billing & Licensing** → **Payment
-information**); GitHub's own documentation says "the account will automatically unlock when a
-payment has been successfully processed," though it also notes payments "may take up to 24 hours to
-process."
+payment is past due because of billing problems." The fix is to update your payment method. In the
+top right corner of any GitHub page, click your profile picture, then **Settings** in the menu that
+opens. In the left-hand list of settings, find **Billing & Licensing**, then **Payment information**
+underneath it. You'll know you're in the right place because the page shows your current payment
+method and a way to add a new one. GitHub's own documentation says "the account will automatically
+unlock when a payment has been successfully processed," though it also notes payments "may take up
+to 24 hours to process."
 
 **None of the above, and you still can't get in.** GitHub has a dedicated support page for exactly
 this situation, at
@@ -64,12 +134,12 @@ a policy reason rather than a simple lockout. Don't create a second GitHub accou
 this without checking with your team first, your business's repositories are almost certainly tied
 to the original account, and a second account won't see them.
 
-## I lost my phone with two-factor authentication on it
+### I lost my phone with two-factor authentication on it
 
 This is covered in full, with every step, in `01-accounts-and-security.md`. The short version, in
 order:
 
-1. **Try your recovery codes**, if you saved them, at the sign-in screen's "More options" → 2FA
+1. **Try your recovery codes**, if you saved them, at the sign-in screen's "More options" then 2FA
    recovery code.
 2. **Try any other method you already had configured**, a passkey, a security key, or GitHub Mobile
    on a second device.
@@ -86,7 +156,7 @@ At that point there is nothing left to try alone, and repeatedly guessing at cod
 Go straight to the recovery steps in `01-accounts-and-security.md`, and treat the community as moral
 support here, not a technical fix, nobody else can complete this step for you.
 
-## My invite never arrived
+### My invite never arrived
 
 Covered in full in `03-members-and-access.md`. The checklist:
 
@@ -99,14 +169,15 @@ Covered in full in `03-members-and-access.md`. The checklist:
    to be a collaborator on one specific repository.
 4. **If it's expired**, whoever invited you can find it under **Failed invitations** on the
    organization's People tab (or the repository's Collaborators screen) and click **Retry
-   invitation**, rather than either of you assuming something is broken.
+   invitation**, rather than either of you assuming something is broken. Confirm on that screen
+   that the invitation's status changes from failed back to pending after retrying.
 
 **Stop and ask if:** it's genuinely under seven days, it isn't in spam, and the person who invited
 you confirms, by looking at their own screen, that the invite is still shown as pending. At that
 point, stop guessing and have them cancel it and send a fresh one to a confirmed correct address
 instead.
 
-## I pushed to the wrong place
+### I pushed to the wrong place
 
 **What happened, most often:** a change landed on the wrong branch inside a repository you meant to
 be working in, usually a direct commit to your main branch when you meant to be on a working branch.
@@ -122,8 +193,8 @@ Less often, it landed in the wrong repository entirely.
    new commit that undoes exactly what the mistaken one did. GitHub's own engineering blog describes
    why this is the safe move: "`git revert` will create a new commit that's the opposite (or
    inverse) of the given SHA... This is Git's safest, most basic 'undo' scenario, because it doesn't
-   alter history." Nothing about your project's past is erased or rewritten, a new commit is simply
-   added that cancels the mistaken one out.
+   alter history." Nothing about your project's past is erased or rewritten, a new commit is added
+   that cancels the mistaken one out.
    - **If the mistaken change went through a pull request that's already merged**, open that pull
      request on github.com and, near the bottom, click **Revert**. GitHub's own documentation
      describes what this does: "Reverting a merged pull request creates a new pull request that
@@ -146,7 +217,7 @@ Less often, it landed in the wrong repository entirely.
 you pushed contained something sensitive, that's the next section, and rotating the secret comes
 before tidying up the commit.
 
-## I committed a file with a password or an API key in it
+### I committed a file with a password or an API key in it
 
 **What happened:** a real secret, a password, an API key, a token, ended up inside a file that got
 committed and pushed.
@@ -159,8 +230,9 @@ committed and pushed.
    password/token/credential)... as a first step you need to revoke and/or rotate that secret." This
    single step is what actually closes the danger, the moment the old value stops working anywhere,
    it doesn't matter how many old commits still contain a copy of it.
-2. **Add it to your `.gitignore` so it can't happen the same way again.** `04-repositories-and-visibility.md`
-   has a ready-to-paste starting file, the three lines covering `.env` files matter most.
+2. **Add it to your `.gitignore` so it can't happen the same way again.**
+   `04-repositories-and-visibility.md` has a ready-to-paste starting file, the three lines covering
+   `.env` files matter most.
 3. **Do not just delete the file in a new commit and consider it handled.** GitHub is specific about
    this not being enough on its own: the value "is already checked in," and deleting it going
    forward "does not" remove it from every earlier commit that already held it.
@@ -174,7 +246,7 @@ deciding whether it's "bad enough" to rotate. Rotating takes minutes and closes 
 The history cleanup afterwards is not urgent, and it's exactly the point at which to bring in the
 community rather than dig further alone.
 
-## I deleted something
+### I deleted something
 
 What you can get back, and how, depends entirely on what was deleted.
 
@@ -185,10 +257,12 @@ you deleted a repository by mistake, act immediately and contact
 your case.
 
 **A branch.** If that branch was the head branch of a pull request you'd already closed or merged,
-you can get it back: open that pull request, and near the bottom click **Restore branch**. If the
-branch never went through a pull request at all, there's no documented way to bring it back through
-GitHub's interface. If you're ever unsure whether you'll want a branch's work again, the safer habit
-is to leave it alone rather than delete it, an unused branch costs nothing just sitting there.
+you can get it back: open that pull request, and near the bottom click **Restore branch**. Check
+back on the repository's branch list afterward, if the branch you deleted is there again, the
+restore worked. If the branch never went through a pull request at all, there's no documented way to
+bring it back through GitHub's interface. If you're ever unsure whether you'll want a branch's work
+again, the safer habit is to leave it alone rather than delete it, an unused branch costs nothing
+just sitting there.
 
 **A file.** This uses the same revert mechanism as the previous "pushed to the wrong place" section,
 because deleting a file is itself just a commit, and the opposite of a commit that removes a file is
@@ -202,14 +276,16 @@ outside of a pull request with no documented restore path, ask before trying any
 don't already know from this kit, guessing at commands beyond a revert can make recovery harder, not
 easier.
 
-## I cannot see a repository someone says they shared with me
+### I cannot see a repository someone says they shared with me
 
 Work through this in order, most people find the answer in the first three steps.
 
-1. **Confirm you're signed in to the correct GitHub account.** Click your profile picture, top
-   right, and check the username shown matches what you told the person who shared it with you.
-   Having more than one GitHub account (a personal one and a work one, say) and being signed into
-   the wrong one in your browser is a genuinely common, easy-to-miss cause.
+1. **Confirm you're signed in to the correct GitHub account.** In the top right corner of any
+   GitHub page, click your profile picture. A menu opens showing your username, check it matches
+   what you told the person who shared it with you. Having more than one GitHub account (a personal
+   one and a work one, say) and being signed into the wrong one in your browser is a genuinely
+   common, easy-to-miss cause. If a different account's name is showing, sign out and back in as the
+   right one before anything else.
 2. **Confirm you actually accepted the invite, not just received it.** An invitation to join an
    organization, or to be a collaborator on one specific repository, needs to be accepted before it
    grants you anything, GitHub's own wording: "They will need to accept the invitation before
@@ -226,17 +302,17 @@ Work through this in order, most people find the answer in the first three steps
    are only accessible to you, people you explicitly share access with, and, for organization
    repositories, certain organization members." Being sent the link on its own grants you nothing,
    if a link was all you were given, the actual access step, covered in `03-members-and-access.md`
-   or `04-repositories-and-visibility.md`, may simply not have happened yet.
+   or `04-repositories-and-visibility.md`, may not have happened yet.
 6. **If all of that checks out and you still can't see it**, ask the person who shared it to open
-   that repository's own **Settings → Collaborators & teams** (or the organization's **People** tab)
-   and confirm your exact username is listed there, not just that they remember adding you.
+   that repository's own **Settings then Collaborators & teams** (or the organization's **People**
+   tab) and confirm your exact username is listed there, not just that they remember adding you.
 
 **Stop and ask if:** you've confirmed your account, confirmed the invite was genuinely accepted, and
 it still doesn't show. That's not something to keep guessing at alone, get the person who shared it
 to look at their own screen with you at the same time, one of you is very likely seeing something
 the other one isn't.
 
-## My change is not showing up
+### My change is not showing up
 
 Work through this in order, it's almost always one of the first four.
 
@@ -254,14 +330,14 @@ Work through this in order, it's almost always one of the first four.
 6. **If you're working from a downloaded ZIP rather than a clone, remember what a ZIP actually is.**
    GitHub's own documentation is direct: "snapshots don't contain the entire repository history," it
    is a one-time copy that never updates itself. If you edited a file inside an old ZIP folder, you
-   may simply be looking at an outdated copy, not a real problem with your change. Download it again.
+   may be looking at an outdated copy, not a real problem with your change. Download it again.
 
 **Stop and ask if:** you've confirmed it's committed, pushed, on the branch you're checking, merged
 if it needed to be, and refreshed the page, and it's still nowhere to be seen. Bring the exact commit
-or pull request link with you when you ask, rather than describing it from memory, see the last
-section on this page for why that matters.
+or pull request link with you when you ask, rather than describing it from memory, see "Asking for
+help well" below for why that matters.
 
-## I have a conflict I do not understand
+### I have a conflict I do not understand
 
 A merge conflict is git asking you a question it can't answer by itself, not an error you caused and
 not a sign anything is broken. This is covered start to finish, including what the marker lines
@@ -273,21 +349,27 @@ the marker lines doesn't look like something you'd normally read or write. `08-m
 covers exactly how to recognise that moment and what to do next, don't force the browser tool past
 that point.
 
-## The repository is public and should not be
+### The repository is public and should not be
 
 **What happened:** at some point the repository's visibility was set to public, whether when it was
 first created or changed afterwards, on purpose or by mistake.
 
 **What to do right now, in this order:**
 
-1. **Flip it back to private immediately.** Open the repository, click **Settings**, scroll to the
-   **Danger Zone**, click **Change visibility**, select **Private**, confirm you've read the
-   warnings, and click through to finish. Full click-by-click detail is in
+1. **Flip it back to private immediately.** Open the repository's front page, and along the top, in
+   the row of tabs that starts with **Code** and **Issues**, look toward the right-hand end for a
+   tab labelled **Settings**. On that page, scroll to the bottom to the **Danger Zone**. You'll know
+   you're in the right section because it groups the repository's most serious actions together:
+   changing visibility, transferring ownership, and deleting the repository. Click **Change
+   visibility**, select **Private**, confirm you've read the warnings, and click through to finish.
+   If you don't see a **Settings** tab at all, you're not an administrator of that repository, and
+   whoever is will need to make this change, or grant you that access first
+   (`03-members-and-access.md` covers access levels). Full click-by-click detail is in
    `04-repositories-and-visibility.md`.
 2. **At the same time, assume anything sensitive it held has already been seen or copied.** Being
-   public even briefly doesn't undo itself when you flip the switch back. `04-repositories-and-visibility.md`
-   states this plainly: "assume it may already have been seen or copied, and flipping back to
-   private does not undo that."
+   public even briefly doesn't undo itself when you flip the switch back.
+   `04-repositories-and-visibility.md` states this plainly: "assume it may already have been seen or
+   copied, and flipping back to private does not undo that."
 3. **If it held a real secret, that's the previous section on this page, act on it now, not after
    you've finished tidying up visibility.** Rotate the secret first, in whatever service issued it.
 4. **Know what flipping it back changes on its own, so you're not surprised afterward.** Existing
@@ -300,7 +382,7 @@ have the admin access to change the visibility yourself. Don't wait to find out 
 flag it in the community immediately and get someone with access to flip it while you work out what
 it held. Minutes matter more here than being sure first.
 
-## Asking for help well
+### Asking for help well
 
 The single biggest difference between a question that gets answered in five minutes and one that
 sits unanswered is what you include the first time you ask.
@@ -330,7 +412,79 @@ something you see doesn't match what a guide (including this one) describes, tru
 over the guide, and say so when you ask, that mismatch is itself useful information for whoever
 helps you.
 
----
+## Strategy: how to actually use this
+
+**One rule outranks everything else on this page: if a secret is involved, rotate it first, no
+matter what else is going on.** If you pushed to the wrong place and the commit also contained an
+API key, don't sequence it as "fix the branch, then think about the key." Rotate the key first,
+every time, then come back and sort out where the commit landed. A misplaced commit costs you tidy-up
+time. A live secret sitting in a public or semi-public place costs you the thing it protects.
+
+**Not every wrong turn belongs on this page.** If something looks different from what you expected
+but nothing is broken and nothing is urgent, that's often just a refresh or a wrong-branch moment,
+covered under "My change is not showing up" above. Reach for this page when you're genuinely stuck
+or genuinely worried, not for every small surprise, or you'll start treating routine friction as an
+emergency.
+
+**A solo operator working alone has to be more cautious with Claude Code's suggestions, not less.**
+There's nobody looking over your shoulder to catch a bad guess before it's pushed. The trade-off:
+stick strictly to the fixes shown on this page and in the files it points to, and treat any command
+Claude Code proposes that isn't shown here as a "stop and ask" moment by default, even if it sounds
+confident. The community is your second pair of eyes when you don't have a teammate for that.
+
+**A team of four should agree, once, on who holds the "stop and ask" line.** Not every situation
+needs a formal decision-maker, but the ones flagged "stop and ask" above genuinely benefit from one
+person who's allowed to say "we wait" while someone checks, rather than whoever is online first
+guessing at a fix under pressure. Decide this before you need it, not during the incident.
+
+**The decision rule that covers almost everything here:** if the fix is a documented click shown on
+this page, do it yourself. If the fix would need a git command not shown anywhere in this kit,
+that's the line, stop and ask, regardless of how confident anyone (including Claude Code) sounds
+about it. Confidence isn't the same as safety when the action can't be easily undone.
+
+**What good looks like months later:** a team that's never once needed the "rewriting history"
+warning on this page, because the `.gitignore` habits and rotation discipline from day one meant a
+secret never had to be scrubbed out of history in the first place. That's this page working, not
+this page being unnecessary.
+
+**What would change my mind about a "one-off" mistake:** the same mistake happening twice on the
+same repository. A single accidental push to the default branch is a Tuesday. A second one, from the
+same person, on the same repository, within a few months, isn't bad luck anymore, it's a sign the
+underlying setup needs a guardrail, most often branch protection, covered in
+`10-protecting-your-work.md`, so the mistake becomes structurally harder to repeat rather than
+something you keep reverting by hand.
+
+## A worked example
+
+The café's ordering site is run by the same small team described in the strategy pack for this kit:
+an owner, a nephew who built and maintains the site, and a staff member who updates menu text and
+hours.
+
+The staff member has started making small text changes herself, using Claude Code, on a working
+branch, the way `05-daily-workflow.md` describes. One afternoon, in a hurry before a delivery
+deadline, she commits and pushes a change directly, without checking which branch she's on, and it
+lands straight on the site's default branch. Worse, the file she edited also contained a test API
+key for the payment provider, sitting in a `.env` file that was never added to `.gitignore`.
+
+She notices the mistake within the hour and messages the nephew rather than trying to fix it herself.
+He reads this page and follows the priority rule at the top of the strategy section above: the
+secret comes first, regardless of the branch problem sitting next to it. He logs into the payment
+provider's dashboard, generates a new test key, and revokes the old one immediately, before he does
+anything else. That single step means the leaked key is now worthless to anyone who might have seen
+it, whether or not the repository was ever public.
+
+Only once that's done does he turn to the branch. He asks Claude Code: "What did we just push, and
+where did it go?" It confirms the commit landed directly on the default branch. Since there's no
+pull request involved, he asks it to revert that specific commit, and it pushes the inverse change,
+restoring the file to how it was before, without touching anything else. He does not attempt a
+force-push, and he does not try to remove the old key from the repository's history himself, that
+value is already dead now that it's rotated, so there's no urgency left in the history itself.
+
+Last, he adds `.env` to the repository's `.gitignore` file, using the starting file in
+`04-repositories-and-visibility.md`, so the same file can't be committed by accident again. The
+whole incident, start to finish, costs him about fifteen minutes, almost all of it the rotation
+step, because he followed the order this page recommends instead of tidying the branch first and
+getting to the key second.
 
 ## If it goes wrong
 
@@ -344,9 +498,9 @@ ask" line for that section and follow it, rather than layering guesses.
 **Nothing in this whole kit covers it.** Say that plainly to whoever you ask, rather than presenting
 a guess as a fact. "I've checked this kit's troubleshooting page and it isn't in there" is a
 genuinely useful thing to tell someone helping you, it saves them from re-explaining something you
-already ruled out.
+already ruled out. Use the "Asking for help well" template above when you do.
 
-## Questions people ask here
+## FAQ
 
 **Did I permanently break something?** Almost certainly not. Nearly everything covered on this page
 has a documented way back, or a safe forward-only fix like a revert. The two genuinely hard-to-undo
@@ -372,7 +526,36 @@ technical background to do alone. Past that point, the honest answer is that gue
 commands this kit hasn't shown you can turn a small, recoverable mistake into a bigger one. Asking
 costs you a few minutes. A bad guess can cost a lot more.
 
----
+**I'm not sure which of the ten situations I'm even in, where do I start?** Read the "what happened"
+line at the top of each section, not the full section, until one matches what's on your screen.
+Most people find their situation in under a minute this way. If genuinely nothing matches, that's
+the "Nothing in this whole kit covers it" line above.
+
+## Quick reference
+
+- **Can't sign in (forgot password):** [github.com/password_reset](https://github.com/password_reset)
+- **Can't sign in (paid features locked):** update payment method under profile picture, then
+  **Settings**, then **Billing & Licensing**, then **Payment information**
+- **Can't sign in (nothing above worked):**
+  [support.github.com/contact/cannot_sign_in](https://support.github.com/contact/cannot_sign_in)
+- **Lost 2FA device:** try recovery codes, then any other configured method, then
+  `01-accounts-and-security.md`
+- **Invite never arrived:** check spam, check the email address, check the seven-day expiry,
+  `03-members-and-access.md`
+- **Pushed to the wrong branch:** revert the commit, ask Claude Code, never force-push
+- **Committed a secret:** rotate it first, always, before touching the commit or the branch
+- **Deleted a repository:** contact [GitHub support](https://support.github.com/) immediately, 90-day
+  window at best
+- **Deleted a branch:** open the pull request it came from, click **Restore branch**, if it had one
+- **Deleted a file:** revert the commit or pull request that removed it
+- **Can't see a shared repository:** check the account you're signed in as, then the invite, then
+  `03-members-and-access.md`
+- **Change not showing up:** check committed, pushed, right branch, merged, then hard refresh
+- **Merge conflict:** `08-merge-conflicts.md`
+- **Repository is public by mistake:** Settings, then Danger Zone, then Change visibility, then
+  Private, then assume it was already seen
+- **Asking for help:** what you tried to do, the exact link, the exact error, what you expected,
+  what you've already tried
 
 ## Sources
 

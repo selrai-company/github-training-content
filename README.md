@@ -98,37 +98,74 @@ the right topic without you knowing what GitHub calls it.
 
 ## The topics
 
-Read these in order if you are starting from nothing. Jump straight to one if you have a specific
-problem.
+Twenty-four topics. Work down them in order if you are new, or jump straight to the
+one that matches your problem. The [dashboard](dashboard.html) does the same thing with a search box.
 
-### Getting set up
+### Start here
+
+Do these four in order. They are the setup everything else assumes.
 
 | Topic | Read this when |
 | --- | --- |
-| [Your account, and locking it down](topics/01-accounts-and-security.md) | You are setting up, or you are worried about getting locked out |
-| [Organizations](topics/02-organizations.md) | You want to know what an organization is and whether you actually need one |
-| [Adding people, and the right access](topics/03-members-and-access.md) | Someone else needs in, or someone is leaving |
-| [Repositories, public or private](topics/04-repositories-and-visibility.md) | You are making a place to keep work, and choosing who can see it |
+| [Your GitHub account, and locking it down](topics/01-accounts-and-security.md) | You are setting up, or you are worried about getting locked out |
+| [Organizations, and when you actually need one](topics/02-organizations.md) | You want to know what an organization is and whether you actually need one |
+| [Adding people, and giving them the right access](topics/03-members-and-access.md) | Someone else needs access, or someone is leaving |
+| [Repositories, and the public or private choice](topics/04-repositories-and-visibility.md) | You are making a place to keep work, and choosing who can see it |
 
 ### Doing the work
 
+The everyday loop, and changing things without breaking them.
+
 | Topic | Read this when |
 | --- | --- |
-| [The everyday workflow](topics/05-daily-workflow.md) | You want the normal loop: get a copy, change it, save it |
-| [Branches](topics/06-branches.md) | You want to change something without breaking what everyone else sees |
-| [Pull requests](topics/07-pull-requests.md) | You want a change looked at before it lands |
-| [Merge conflicts](topics/08-merge-conflicts.md) | Two changes disagree and you are being asked to decide |
-| [Markdown, and writing things people can read](topics/14-markdown-and-writing.md) | You are writing a README, an issue, or a description |
+| [The everyday workflow, and getting work in and out](topics/05-daily-workflow.md) | You want the normal loop: get a copy, change it, save it |
+| [Branches, and changing things without breaking them](topics/06-branches.md) | You want to change something without breaking what everyone else sees |
+| [Pull requests, and getting a change reviewed](topics/07-pull-requests.md) | You want a change looked at before it lands |
+| [Merge conflicts, and what to do when git asks you a question](topics/08-merge-conflicts.md) | Two changes disagree and you are being asked to decide |
+| [Forks, and practising without breaking anything](topics/09-forks-and-contributing.md) | You want to practise, or contribute to something that is not yours |
 
-### Still being written
+### Keeping it safe and tidy
 
-Forks and practising safely. Protecting the main copy. Using GitHub through Claude Code.
-Troubleshooting. Issues and tracking work. Finding things again. Notifications. Releases and versions.
-Automation. The security features. Licences and who owns what. Moving existing work in. Undoing things.
-Backups and never being locked in. The rest of the platform.
+Protecting the work, tracking it, and finding it again.
 
-They appear in the tables above as they land, so the tables are always the accurate list of what
-exists.
+| Topic | Read this when |
+| --- | --- |
+| [Protecting the main copy, and what it costs](topics/10-protecting-your-work.md) | You want to stop changes landing on the main copy unchecked |
+| [Issues, and keeping track of what needs doing](topics/13-issues-and-tracking-work.md) | You are losing track of what needs doing |
+| [Finding things again, without hunting](topics/15-finding-things.md) | You cannot find something you know is in there |
+| [Notifications, and not drowning in them](topics/16-notifications.md) | Your inbox is drowning you, or you are missing things that matter |
+| [Markdown, and writing things people can actually read](topics/14-markdown-and-writing.md) | You are writing a README, an issue, or a description |
+
+### Growing up
+
+What you reach for as the business gets bigger.
+
+| Topic | Read this when |
+| --- | --- |
+| [Releases and versions, marking what you shipped](topics/17-releases-and-versions.md) | You need to mark which version went out, and when |
+| [Automation, what GitHub can do while you sleep](topics/18-automation-basics.md) | You are wondering what GitHub can do automatically for you |
+| [The security features that watch your back](topics/19-security-features.md) | You want to know what is watching your back, and what is not |
+| [Who owns what you put on GitHub, and how licences work](topics/20-licences-and-ownership.md) | You want to know who owns the work, and what a licence decides |
+| [Moving work you already have into GitHub](topics/21-moving-your-work-in.md) | Your work is stuck on one laptop and needs to move |
+
+### Staying in control
+
+Undoing, backing up, and knowing what else exists.
+
+| Topic | Read this when |
+| --- | --- |
+| [Undoing things, and getting back to how it was](topics/22-undoing-things.md) | You made a mistake and want to know if it can be undone |
+| [Backups, exports, and never being locked in](topics/23-backups-and-leaving.md) | You want to know you are not locked in, and could leave |
+| [The rest of GitHub, and what is worth your time](topics/24-the-rest-of-github.md) | You want to know what else is there and whether to bother |
+
+### When you are stuck
+
+The two to bookmark.
+
+| Topic | Read this when |
+| --- | --- |
+| [When it goes wrong, and how to get unstuck](topics/12-when-things-go-wrong.md) | Something has broken and you need it fixed now |
+| [Using GitHub through Claude Code](topics/11-github-with-claude-code.md) | You would rather ask Claude Code than click around a browser |
 
 ## Beyond the step by step
 

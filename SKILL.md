@@ -91,8 +91,11 @@ These are corrections this kit has already had to make. Do not reintroduce them.
   recommendation**, not GitHub's default, and must be described that way.
 - Any claim about **branch protection or rulesets** carries the qualifier **"on private repositories"**.
   The public and private split is real.
-- **Creating a branch does not require Write access** as a rule to state. What is true is that you
-  cannot push to a repository you only have read access to.
+- **Creating a branch does require Write access**, and GitHub states it directly: "You can only create
+  a branch in a repository to which you have write access." An earlier version of this file said the
+  opposite. It was wrong, and it was corrected on 2026-08-18 after the sentence was fetched from
+  GitHub's own page. What GitHub does NOT state anywhere reachable is the access needed to DELETE a
+  branch, so do not assert that one.
 - **Do not assert that creating an organization makes them its owner.** Have them look at the People
   page and read their own role.
 - **Two-factor by SMS works in certain countries**, not most, and GitHub's own documentation recommends

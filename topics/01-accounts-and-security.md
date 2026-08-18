@@ -258,7 +258,7 @@ dismiss the email.
 Every so often, check what third-party tools can see inside your GitHub account, and remove
 anything you no longer use.
 
-Open your account settings (**profile picture** → **Settings**), and look down the left-hand
+Open your account settings (**profile picture** then **Settings**), and look down the left-hand
 sidebar for **Applications**. The direct address, the same for every GitHub user, is
 [**github.com/settings/applications**](https://github.com/settings/applications). You will know
 you are in the right place because it lists each outside tool you have authorized, one row per
@@ -270,7 +270,7 @@ see: GitHub's own documentation confirms "you also specify which repositories th
 access." Read that screen before you click **Authorize**. If a tool only needs to work with one
 repository, grant it that one repository, not "all repositories."
 
-**Screenshot placeholder:** the Settings → Applications page, showing an authorized app's
+**Screenshot placeholder:** the Settings then Applications page, showing an authorized app's
 repository access, so a reader can see what this screen looks like before they hit it live.
 
 ## Strategy: how to actually use this
@@ -361,7 +361,7 @@ account.
 **I lost my phone, my authenticator app, or my SMS number, and I need to get back in.** Work
 through this in order:
 
-1. **Try your recovery codes**, if you saved them (login screen → "More options" → 2FA recovery
+1. **Try your recovery codes**, if you saved them (login screen then "More options" then 2FA recovery
    code).
 2. **Try another method you've already configured**, if you have one. GitHub's own guidance
    lists "authenticating with another method, such as a passkey, GitHub Mobile, or a security
@@ -431,13 +431,13 @@ list on GitHub's own pricing page if you want certainty before relying on it.
 - **Create an account:** [github.com/signup](https://github.com/signup), then verify your email
 - **Hide your real email in commits:** [Emails settings](https://github.com/settings/emails),
   **Keep my email addresses private**
-- **Turn on 2FA:** profile picture → **Settings** → **Password and authentication** (or go
-  straight to [Security settings](https://github.com/settings/security)) → **Enable two-factor
+- **Turn on 2FA:** profile picture then **Settings** then **Password and authentication** (or go
+  straight to [Security settings](https://github.com/settings/security)) then **Enable two-factor
   authentication**
-- **Get your recovery codes:** same page → **Recovery codes** → **View**, save in a password
+- **Get your recovery codes:** same page then **Recovery codes** then **View**, save in a password
   manager
-- **Review authorized apps:** profile picture → **Settings** →
-  [**Applications**](https://github.com/settings/applications) → **Revoke**
+- **Review authorized apps:** profile picture then **Settings**  then 
+  [**Applications**](https://github.com/settings/applications) then **Revoke**
 - **Locked out:** recovery codes first, then another configured method, then GitHub Support
   only if both are gone (Support cannot restore 2FA access itself)
 - **Suspicious email:** never click a sign-in link inside one, type github.com into a new tab

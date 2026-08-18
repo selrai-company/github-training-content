@@ -186,7 +186,7 @@ to an hour after a repository is deleted before that repository is available for
 4. Read the warning shown on screen, then click **I understand, restore this repository**.
 
 **For a repository owned by an organisation**, the equivalent screen sits under that
-organisation's own **Settings → Deleted repositories** instead, and an organisation owner needs to
+organisation's own **Settings then Deleted repositories** instead, and an organisation owner needs to
 be the one to click it.
 
 **Three limits worth knowing before you assume this always works:**

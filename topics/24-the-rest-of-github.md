@@ -64,8 +64,9 @@ searchable, but is not truly private either. GitHub's own wording: "if you send 
 gist to a friend, they'll be able to see it." Anyone with the direct link can open it.
 
 **GitHub Projects.** A planning board that sits above your issues and pull requests, letting you view
-and organise them as a table, a kanban-style board, or a timeline. GitHub's own wording: "an adaptable
-table, board, and roadmap that integrates with your issues and pull requests."
+and organise them as a table, a board of cards you drag between columns like "To do" and "Done," or a
+timeline. GitHub's own wording: "an adaptable table, board, and roadmap that integrates with your
+issues and pull requests."
 
 **Custom field.** A piece of information you add to a Project yourself, beyond what an issue or pull
 request already carries, such as a priority level or a due date, so you can sort and group by it.
@@ -255,7 +256,7 @@ one file involved, or once the content needs real privacy rather than an unliste
 ### Projects: a board view across your issues and pull requests
 
 **What it is.** A visual way to plan and track work, sitting on top of the issues and pull requests
-you already have, viewable as a table, a kanban-style board, or a timeline.
+you already have, viewable as a table, a board of cards you drag between columns, or a timeline.
 
 **Who it is for.** Anyone coordinating more than a handful of issues at once, especially across more
 than one repository, who wants to see the whole picture in one place rather than reading a plain list.
@@ -536,9 +537,11 @@ plan-based restriction stated on GitHub's own plan comparison page for Projects,
 restrictions it states for private GitHub Pages sites and for Wikis under GitHub Pro and Team. Confirm
 current availability on GitHub's own pricing page if you want certainty before relying on it.
 
-**Do I have to install the mobile app to use GitHub Mobile features like Copilot Chat?** Yes, GitHub's
-own description of Copilot Chat inside GitHub Mobile is specifically part of the app, not something
-available through a phone's browser.
+**Is GitHub Copilot Chat only available through the mobile app?** No. This kit could not confirm that
+from GitHub's own pages, and it would be surprising if true, since Copilot Chat is a broader GitHub
+feature. What GitHub's own page for the app confirms is only that the app includes it as one of its
+features, not that the app is the only place it lives. Confirm on your own screen where else you can
+already reach it before assuming the app is your only option.
 
 **Can I follow my own business's repositories to keep an eye on them?** That is what watching is for,
 not following, which is aimed at people and organisations. `16-notifications.md` covers watching in

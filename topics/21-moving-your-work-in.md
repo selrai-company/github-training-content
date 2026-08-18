@@ -299,7 +299,7 @@ Once the files are up, the work is not quite done: whoever needs access still ne
 given it, and told what changes for them.
 
 **Give them access first.** For one or two specific people on a repository under your own personal
-account, add them as a collaborator, the exact steps are in the "Access → Collaborators" part of
+account, add them as a collaborator, the exact steps are in the "Access then Collaborators" part of
 `04-repositories-and-visibility.md`. If you already have an organization and this is going to be
 one of several repositories a real team shares on an ongoing basis, add them as an organization
 member instead, covered fully in `03-members-and-access.md`. Give them the narrowest access that
@@ -479,7 +479,7 @@ track of what has and has not actually landed.
 
 **Browser route (small folder, first time, want to watch it happen):**
 1. Create the repository (README and `.gitignore` on).
-2. Add file → Upload files → drag your files or folder in.
+2. Add file then Upload files then drag your files or folder in.
 3. Check the file list landed correctly.
 4. Write a commit message, click Commit changes.
 
@@ -492,7 +492,7 @@ track of what has and has not actually landed.
 is over 25 MiB. Over 100 MiB, use Git LFS, a GitHub Release, or keep it out of the repository
 entirely.
 
-**Already in another Git host:** use the **+** icon → **Import repository** instead of downloading
+**Already in another Git host:** use the **+** icon then **Import repository** instead of downloading
 and re-uploading by hand.
 
 **After it lands:** give your team access (collaborator or organization member), tell them plainly
