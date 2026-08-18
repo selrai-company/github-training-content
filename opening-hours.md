@@ -14,4 +14,4 @@ Sunday: closed
 Public holidays: closed
 Phone: not a real number, so there is nothing to call
 
-Last changed by: nobody yet
+Last changed by: automated end to end test
