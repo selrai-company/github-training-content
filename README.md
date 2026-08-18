@@ -161,8 +161,7 @@ access needed to change this original, so the system refuses rather than letting
 ## How this was built, and how far to trust it
 
 **Everything here comes from GitHub's own documentation.** Every topic page ends with the exact pages it
-was built from, so you can check any claim yourself rather than taking our word for it. There are
-currently ninety-three such sources across the pages.
+was built from, so you can check any claim yourself rather than taking our word for it.
 
 **Where GitHub does not publish something clearly, we do not guess on your behalf.** The page tells you
 to look at your own screen and read what is actually there. That happens more than you might expect,
