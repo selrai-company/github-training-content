@@ -1,104 +1,134 @@
-# GitHub training: the practice files
+# The practice folder
 
-This repo holds the hands-on practice material for the GitHub training. It is a sandbox, and it exists
-so you can try out branches, commits and pull requests on something that does not matter, before you
-try them on anything that does.
+This is where you try things without any risk at all.
 
-Nothing in here is part of your business. Nothing in here is software. Nothing in here runs. It is a
-few text files about a pretend cafe, and they are here to be scribbled on.
+## What is actually in here
 
-## You cannot break anything
+Two files about a cafe that does not exist. One holds its opening hours. The other holds a note about
+Saturday. That is the whole thing.
 
-Three reasons, and all three are true at the same time.
+They are deliberately pointless. Nobody uses them, nothing depends on them, and no part of your business
+touches them. That is what makes them useful. You can change anything here, get it wrong, and it costs
+nothing.
 
-1. You do not work on this copy. You make your own copy first, which is called a fork. Your changes
-   land in your copy, not in this one.
-2. There is nothing here to break. No app, no automation, no keys, no passwords, no connection to any
-   account of yours. Just text files.
-3. Even if you delete everything in your copy, this original is untouched, and you can throw your copy
-   away and make a fresh one in about ten seconds.
+## Why practise at all
 
-If you feel nervous the first time, that is normal, and this repo is the right place to feel it.
+The first time you change something on GitHub, the screen asks you questions you have not seen before,
+and it is hard to tell which answer is safe. That is a bad moment to be having on a real file that
+matters to your business.
 
-## What is in here
+So have it here first, on a cafe that does not exist.
 
-| File | What it is for |
-| --- | --- |
-| `README.md` | This page. |
-| `opening-hours.md` | The file to practise editing. Pretend opening hours for a pretend cafe. |
-| `conflict-practice/saturday-note.md` | The file used for the merge conflict practice. Leave it alone until you get to that part. |
-| `.gitignore` | A ready made list of files git should never upload. Copy it into your own projects. |
+## The words you will meet, in the order you will meet them
 
-That is the whole repo. If you are looking for something else, it is not here on purpose.
+You do not need to memorise these. They are here so that when the screen says one of them, you know what
+it is talking about.
 
-## What to do here
+**Repository.** A folder for one project, kept online, where a record is saved every time anyone changes
+anything. People often shorten it to "repo". This page you are reading is inside one.
 
-You can do all of this in your web browser. You do not need to install anything.
+**Fork.** Your own complete copy of somebody else's repository, kept in your own account. Changing your
+copy has no effect at all on theirs. This is how you practise on someone else's work without touching
+it.
 
-1. Make your own copy of this repo, using the Fork button at the top of the page.
-2. In your copy, open `opening-hours.md`.
-3. Change something. Change the Sunday line, or put your first name on the last line. It does not
-   matter what you change.
-4. Save it as a new branch instead of saving straight to the main copy, and give the branch a short
-   name like `my-first-change`.
-5. Open a pull request from your branch back to this repo, and write one sentence saying what you
-   changed.
+**Branch.** A working copy inside a repository, where you can change things without those changes showing
+up for anyone else yet. You make a branch, change what you want, and only then decide whether it should
+become part of the main version.
 
-That is the whole loop. When you have done it once, you have done the thing the lesson is teaching.
+**Commit.** Saving a change, with a short note about what you changed and why. Every commit is kept, so
+you can always see what happened and when.
 
-## The merge conflict practice
+**Pull request.** Asking for your changes to be added to the main version. It is a request, not an
+action: someone looks at it, and it only becomes real when it is approved and merged. On a repository
+you own, that someone is you.
 
-A merge conflict happens when two changes disagree about the same line, and git will not guess which
-one you meant. It is not an error and it is not something you did wrong. It is git asking you a
-question.
+**Merge conflict.** When two people change the same line to two different things, and the system cannot
+work out which one is correct. It is not an error and you have not broken anything. It is the system
+asking you a question it cannot answer on its own.
 
-`conflict-practice/saturday-note.md` has one line in it that is deliberately undecided:
+## Four things to try, in this order
 
-```
-Saturday: hours not decided yet
-```
+Each one builds on the last. Do them in order. The first one takes about two minutes.
 
-To make the two sides disagree, in your own copy:
+### One: make your own copy
 
-1. Edit that file and change only that line to `Saturday: 8am to 12pm`. Save it to a new branch named
-   `saturday-morning`.
-2. Go back to the main copy of your fork, edit the same file again, and change the same line to
-   `Saturday: closed`. Save it to a new branch named `saturday-closed`.
-3. Open a pull request from `saturday-closed` into `saturday-morning`, both inside your own copy.
+Go to the front page of this repository:
+https://github.com/selrai-company/github-training-content
 
-You now have two branches that each changed the same line to something different, which is exactly
-what a merge conflict is. Your lesson picks it up from there.
+Look for a button labelled **Fork**. Use it to make your own copy. Everything after this happens in
+**your** copy, not in this one, so nothing you do can affect anybody else.
 
-Two branches named `example-saturday-morning` and `example-saturday-closed` also already exist here,
-so you can look at what the two sides of the disagreement look like before you make your own. They are
-named differently from the branches you are asked to make above, on purpose, so they never clash with
-yours.
+If you cannot find that button, the page layout may have changed since this was written. Read what the
+buttons near the top of the page actually say, and use the one that offers to make you a copy.
 
-There is also a worked example already open, pull request number 1, "Example: Saturday hours disagree".
-It is those two branches pointed at each other, so it is permanently in a conflicted state. Open it if
-you want to see what a real conflict looks like on screen before you create one yourself. It is left
-open deliberately and it is not waiting on anyone.
+You will know it worked because the name at the top of the page changes to your own account name.
 
-## What happens to your pull request
+### Two: change one line
 
-We read it. Usually we leave a short comment and then close it, and closing it is not a rejection. It
-keeps this repo sitting at the same starting point for the next person who arrives. Your copy and your
-pull request stay in your account either way, so you keep the thing you made.
+In your copy, open `practice/opening-hours.md`.
 
-## The .gitignore, and why it is the important file here
+Find the line near the bottom that reads `Last changed by: nobody yet` and put your own first name
+there instead.
 
-`.gitignore` is a list of files git is told to leave alone. The line that matters is the one for
-`.env`, because a `.env` file is where keys and passwords usually live, and uploading one by accident
-is the single most expensive mistake a beginner makes with git.
+Save it. GitHub will ask you a couple of questions when you save, including a box for a short note about
+what you changed. Write anything. "Added my name" is fine.
 
-Copy that file into your own projects. It is short on purpose so you can read all of it.
+You have now made a commit. That is the whole of it.
 
-## Reuse
+### Three: do it properly, on a branch
 
-Everything in this repo is free for you to copy, change and reuse, in your own work or anywhere else.
-There is nothing here we want back.
+Change the same line again, to anything else.
+
+This time, when GitHub asks how you want to save it, choose the option that creates a **new branch**
+rather than saving straight to the main version. Give the branch a short name, such as `my-first-change`.
+
+Then open a pull request from that branch. GitHub usually offers this straight after you save, with a
+button that mentions a pull request. Write one sentence saying what you changed.
+
+You have now done the thing this training is mostly about. Everything else is a variation on it.
+
+Because it is your own copy, you can approve and merge your own pull request. In a real team, somebody
+else would look at it first.
+
+### Four: cause a conflict on purpose, then fix it
+
+This is the one people find frightening, so do it here where it does not matter.
+
+In your copy, open `practice/conflict-practice/saturday-note.md`. One line in it reads
+`Saturday: hours not decided yet`. That line, and only that line, is the one to change.
+
+1. Change that line to `Saturday: 8am to 12pm` and save it to a new branch called `saturday-morning`.
+2. Go back to the main version of your copy, open the same file again, and change the same line to
+   `Saturday: closed`. Save that to a different new branch called `saturday-closed`.
+3. Open a pull request from `saturday-closed` into `saturday-morning`.
+
+Both branches changed the same line to two different things, so the system cannot decide which is
+correct. It will tell you there is a conflict.
+
+From there, the topic guide on merge conflicts walks you through fixing it.
+
+## A worked example you can look at first
+
+If you would rather see a conflict before you make one, there is one sitting here permanently:
+
+https://github.com/selrai-company/github-training-content/pull/1
+
+It is two branches disagreeing about the Saturday line, left open on purpose so there is always an
+example to look at. It is not waiting on anyone and it is not going to be fixed.
+
+## What you cannot break
+
+Worth saying plainly, because the fear of breaking something stops people trying.
+
+You cannot damage this repository by working in your own copy. You have not been given the access
+required to change this one, so the system will refuse it rather than let you make a mistake.
+
+You cannot lose your own work either. Every save is kept, so an earlier version is always there.
+
+And if you make such a mess of your own copy that you would rather start again, delete it and make a
+fresh copy. It takes about ten seconds and nobody is notified.
 
 ## If you get stuck
 
-Post in the community and say which step you were on and what you saw on the screen. That is enough
-for someone to help you.
+Post in the community, say which of the four steps you were on, and say what the screen actually said.
+That last part is the one that lets somebody help you quickly.

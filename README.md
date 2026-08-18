@@ -32,14 +32,20 @@ The checklists are meant to be copied and kept beside you while you work.
 
 ## Practise without breaking anything
 
-The [practice folder](practice/) is a sandbox. It holds a pretend cafe's opening hours and nothing else,
-on purpose, so you have something completely worthless to experiment on before you touch anything real.
+The [practice folder](practice/) holds two files about a cafe that does not exist. Nothing uses them and
+nothing depends on them, which is exactly the point: you can change anything in there, get it wrong, and
+it costs nothing.
 
-Make a copy of this repository, change things in your copy, open a pull request, make a mess. Nothing
-in the practice folder matters and nothing you do to your own copy affects anyone.
+The first time you change something on GitHub, the screen asks questions you have not seen before and it
+is hard to tell which answer is safe. Better to have that moment here, on a cafe that is not real, than
+on something your business depends on.
 
-There is also a worked example already open, pull request number 1, which is permanently stuck in a
-merge conflict so you can see what one looks like before you create your own.
+**[Open the practice folder](practice/)** and it walks you through four things to try, in order, starting
+with a two minute one. It explains each new word at the point you first need it, so you are not expected
+to already know what a fork or a branch is.
+
+You cannot damage anything by doing this. You work in your own copy, and you have not been given the
+access needed to change this original, so the system refuses rather than letting you make a mistake.
 
 ## If you use Claude Code
 
