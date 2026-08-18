@@ -1,7 +1,8 @@
-# Practice repo
+# GitHub training: the practice files
 
-This is a practice sandbox. It exists so you can try out branches, commits and pull requests on
-something that does not matter, before you try them on anything that does.
+This repo holds the hands-on practice material for the GitHub training. It is a sandbox, and it exists
+so you can try out branches, commits and pull requests on something that does not matter, before you
+try them on anything that does.
 
 Nothing in here is part of your business. Nothing in here is software. Nothing in here runs. It is a
 few text files about a pretend cafe, and they are here to be scribbled on.
