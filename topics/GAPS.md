@@ -201,6 +201,24 @@ directly from Anthropic's own documentation, quoted in the file.
   community and isn't a single fixed GitHub answer. Check the most recent pinned instructions
   in your own community rather than assuming a fixed mechanism.
 
+## 20-licences-and-ownership.md
+
+- **Which of GitHub's two Terms of Service, standard or Corporate, actually covers a given paid
+  organization account**, and specifically whether its content-licence grant to GitHub includes AI
+  training. This file quotes both versions accurately but could not confirm a rule for which one
+  applies to a specific account from GitHub's own published pages alone. Confirm directly with
+  GitHub, or whoever set up the organization's billing, rather than assuming.
+- **Whether removing or replacing a repository's `LICENSE` file cancels permission already granted
+  to someone who copied the work under the old licence.** This file states the general shape (it
+  does not cancel it) as reasoned from how licences generally work, not as a fact found stated word
+  for word on GitHub's own pages for this exact scenario. Confirm with a lawyer if real stakes ride
+  on a specific case.
+- **Whether GitHub itself ever polices or enforces a broken licence condition between two users.**
+  This file infers "no" from GitHub's own disclaimer that it displays licence information and is
+  "not lawyers", not from a direct statement that GitHub never intervenes. Treat licence enforcement
+  as a matter between the parties, and a lawyer, rather than a GitHub support matter, unless you
+  confirm otherwise.
+
 ## One structural item worth checking before you rely on this kit as written
 
 `SKILL.md`, in this same folder, routes every question to a file path written as
