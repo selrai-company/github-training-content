@@ -34,41 +34,84 @@ You need very little. Listed here so you can check rather than find out halfway 
 
 ## Setting up the interactive version
 
-This puts the kit inside Claude Code so it can answer your GitHub questions directly, look things up in
-these guides, and take you through a task step by step.
+This puts the kit inside Claude Code, so it can answer your GitHub questions directly, look things up
+in these guides, and take you through a task one step at a time.
 
-### The short way, if you have Claude Code open
+There are two ways in. The first one is better, because it can update itself later. The kit gets
+corrections and new material, and you want those without doing the setup again.
 
-Ask it, in your own words:
+### The recommended way
+
+If you have Claude Code open, ask it in your own words:
 
 ```
-Please install the GitHub training kit from
+Please install the GitHub training kit by cloning
 https://github.com/selrai-company/github-training-content
-into my Claude Code skills folder, then tell me when it is done.
+into my Claude Code skills folder, in a folder named github-wizard.
 ```
 
-Claude Code can fetch it and put it in the right place. Read what it tells you it is about to do before
-you approve it, which is a good habit generally and not only here.
+Read what it says it is about to do before you approve it. That is a good habit everywhere, not only
+here.
 
-### The manual way, if you would rather do it yourself
+If you would rather run it yourself, this is the whole thing:
+
+```
+git clone https://github.com/selrai-company/github-training-content ~/.claude/skills/github-wizard
+```
+
+On Windows that same command works in Git Bash. If you have never used a terminal, use the Claude Code
+route above instead and let it do this part.
+
+Then restart Claude Code.
+
+### The fallback, if the above will not work
+
+You can download the kit as a file instead. It works exactly the same, with one real cost: **it cannot
+update itself.** When the kit changes, you have to download it again and replace the folder.
 
 1. On [the front page of this repository](https://github.com/selrai-company/github-training-content),
-   find the green button near the top that offers to give you the code, and choose the option to
-   download it as a ZIP file. If the buttons have changed since this was written, read what they
-   actually say and use the one that downloads.
-2. Unzip the file you downloaded. You will get a folder.
-3. Find your Claude Code skills folder. On Windows it is `C:\Users\<your name>\.claude\skills`. On a Mac
-   it is `~/.claude/skills`. If the `skills` folder is not there, make one with exactly that name.
-4. Copy the unzipped folder into it, and rename it to `github-wizard`.
+   look near the top for a green button offering to give you the code, and choose the option to
+   download a ZIP file. If the buttons do not match this description, read what they actually say and
+   use the one that downloads.
+2. Unzip it. You will get a folder.
+3. Find your Claude Code skills folder. On Windows it is `C:\Users\<your name>\.claude\skills` and on a
+   Mac it is `~/.claude/skills`. If there is no `skills` folder, make one with exactly that name.
+4. Put the unzipped folder inside it and rename the folder to `github-wizard`.
 5. Restart Claude Code.
 
-You will know it worked when you ask Claude Code a GitHub question and it answers using these guides
-rather than from general knowledge. A quick way to check is to ask it something specific to this kit,
-such as "what does the practice folder in the GitHub training contain".
+### Checking it worked
+
+Ask Claude Code something only this kit would know, such as:
+
+```
+What is in the practice folder of the GitHub training?
+```
+
+If it tells you about a pretend cafe's opening hours, it is installed. If it gives you a general answer
+about GitHub, it is not, and the most common reason is that Claude Code has not been restarted since
+you put the folder in place.
+
+### Keeping it up to date
+
+The kit gets corrections. When something in GitHub changes, or a mistake is found, the fix lands here
+and you want it.
+
+If you installed the recommended way, one command brings you current:
+
+```
+cd ~/.claude/skills/github-wizard && git pull
+```
+
+Then start a new Claude Code conversation. This part matters: the kit is read when a conversation
+starts, so updating in the middle of one will not change the answers you are already getting. If you
+update and keep going in the same window, you will still see the old behaviour and think the update
+failed.
+
+If you installed the fallback way, download the ZIP again and replace the folder, then restart.
 
 ### Using it once it is installed
 
-You do not need to remember a command. Ask your question the way you would ask a person:
+You do not need to remember a command. Ask the way you would ask a person:
 
 - "Set my team up on GitHub"
 - "I accidentally committed a password, what do I do"
@@ -76,25 +119,20 @@ You do not need to remember a command. Ask your question the way you would ask a
 - "Someone left, how do I remove their access"
 - "Is my repository public"
 
-It will ask you a couple of questions first, to find out where you actually are before it starts giving
-instructions. Answer them plainly. It works one step at a time and waits to hear what you see on your
-screen, because the point is to get you through the task rather than to recite a manual at you.
+And if you do not know what to ask, which is the normal starting point rather than a problem, say so:
+
+- "I do not know where to start with GitHub"
+
+It will ask where you are, put you on a short path of five things that everyone needs, and take the
+first one with you. At the end of every answer it tells you the next question to ask, so you never have
+to work out what to want next.
+
+It works one step at a time and waits to hear what is on your screen, because the point is to get you
+through the task rather than to recite a manual at you.
 
 If it does not know something, it will say so rather than guess. That is deliberate. A confident wrong
-instruction is worse than no instruction, because you cannot tell which of the earlier answers to trust
-afterwards.
-
-## The dashboard
-
-If you would rather see everything at once than scroll a page, open **`dashboard.html`**. Download it
-and double click it, and it opens in your browser like any other page.
-
-It lists every topic with what it is for, lets you search by the thing you are stuck on rather than by
-the name of a feature, and lets you tick topics off as you read them so you can see how far you have
-got. The ticks are saved in your own browser and are not sent anywhere.
-
-Searching it works on plain words. Typing "conflict", "invite someone", "undo" or "public" will find
-the right topic without you knowing what GitHub calls it.
+instruction is worse than no instruction, because afterwards you cannot tell which of the earlier
+answers to trust.
 
 ## The topics
 
