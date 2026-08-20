@@ -219,16 +219,19 @@ directly from Anthropic's own documentation, quoted in the file.
   as a matter between the parties, and a lawyer, rather than a GitHub support matter, unless you
   confirm otherwise.
 
-## One structural item worth checking before you rely on this kit as written
+## RESOLVED: a routing warning that used to live here
 
-`SKILL.md`, in this same folder, routes every question to a file path written as
-`topics/<filename>.md` (for example `topics/01-accounts-and-security.md`), and separately
-points unknown-word questions at `topics/GLOSSARY.md`. As this kit currently sits on disk, the
-numbered topic files live directly in this folder, not inside a `topics` subfolder, and no
-`GLOSSARY.md` file exists anywhere in this kit yet. If `SKILL.md` is used to route lookups as
-written, every one of those file paths will fail to resolve. This is worth fixing (or the
-routing table worth correcting to match where the files actually live) before `SKILL.md` is
-relied on to answer a live question, rather than something to route around case by case.
+This file used to close with a warning that the routing in `SKILL.md` could not resolve, because the
+topic files sat loose in one folder and no glossary existed. **That warning is out of date and the
+problem is fixed.** In the published kit every numbered topic sits under `topics/`, the glossary
+exists at `topics/GLOSSARY.md`, and all fourteen routed paths resolve. Verified on 2026-08-19 by
+cloning the published repository fresh and resolving every path in the routing table.
+
+It is recorded rather than deleted for two reasons. The warning was accurate when written, about the
+staging folder rather than the published kit, and knowing that stops someone re-diagnosing it. And it
+was caught by the kit itself: the first live test of the assistant read this file, checked the claim
+against the actual files, and reported that the alarm was stale instead of repeating it. That is the
+behaviour this whole kit is built around, working on its own documentation.
 
 ## CODEOWNERS, checked and still unverified, 2026-08-18
 

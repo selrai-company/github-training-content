@@ -127,14 +127,9 @@ Read the topic file before you answer from it. Do not answer from memory of a fi
 When a question spans two files, read both before answering. When it spans more than two, that usually
 means they have asked a bigger question than they realise, so narrow it with them first.
 
-**This kit is still being written, and some files in that table do not exist yet.** Check before
-you rely on one. If the file you need is not there, say so in one sentence and do not fill the gap from
-general knowledge. Something like: "That topic is not written yet, so rather than guess I will tell you
-what I can verify and point you at GitHub's own page for the rest."
-
-Then help them anyway, within the honest limits: what you can see on their screen, what the other topic
-files do cover, and GitHub's own documentation, clearly labelled as GitHub's rather than as ours. Never
-invent a click path to cover a missing file.
+**All twenty-four topics exist.** If a file you expect is genuinely not there, say so in one
+sentence and do not fill the gap from general knowledge. Never invent a click path to cover a
+missing file.
 
 ## Practising safely
 
